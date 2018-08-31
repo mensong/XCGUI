@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-项目配置文件-->
+<project name="360">
+    <layoutFiles>
+        <param path="mainFrame.xml" />
+        <param path=".\mainPage2.xml" />
+        <param path=".\mainPage3.xml" />
+    </layoutFiles>
+    <styleFiles>
+        <param path="mainFrame.css" />
+    </styleFiles>
+    <resourceFiles>
+        <param path="mainFrame.res" />
+    </resourceFiles>
+</project>

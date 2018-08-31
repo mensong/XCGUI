@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-布局页文件-->
+<page>
+    <picture id="@ID_PAGE3" left="-1" top="85" width="850" height="465" styleClass="CSS_PAGE" eleType="element">
+        <button id="@ID_NO" left="183" top="99" width="133" height="133" value="page3" />
+    </picture>
+    <reference>
+        <style path=".\mainFrame.css" />
+        <resources path=".\mainFrame.res" />
+    </reference>
+</page>

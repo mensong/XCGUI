@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-布局页文件-->
+<page>
+    <picture id="@ID_PAGE2" left="-1" top="85" width="850" height="465" styleClass="CSS_PAGE" eleType="element">
+        <button id="@IDB_PAGE2_BTN1" left="44" top="142" width="133" height="133" />
+        <button id="@IDB_PAGE2_BTN2" left="212" top="142" width="133" height="133" value="全盘扫描" />
+        <button id="@IDB_PAGE2_BTN3" left="386" top="142" width="133" height="133" value="自定义扫描" />
+    </picture>
+    <reference />
+</page>

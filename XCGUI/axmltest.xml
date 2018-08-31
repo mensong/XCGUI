@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+
+<!--窗口-->
+<window left="400" top="200" width="800" height="600" value="炫彩界面库-XML测试">
+	<button id="1" left="10" top="10" width="100" height="20" value="按钮" tooltips="按钮提示"></button>
+	<edit id="2" left="10" top="50" width="200" height="100" value="编辑框"></edit>
+	<menuBar id="6" left="10" top="160" width="200" height="30"></menuBar>
+	<toolBar id="7" left="10" top="220" width="200" height="30"></toolBar>
+	<tree id="8" left="10" top="280" width="200" height="200"></tree>
+</window>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-样式文件-->
+<style>
+    <button type="class" name="classButton" bStretch="true" image_leave="xml\image\button2.png" />
+    <button type="id"
+		id="@IDB_BUTTON1"
+		name="idButton"
+		bTransparent="false"
+		tooltips="按钮提示"
+		bStretch="true" value="button" 
+		image_leave="xml\image\btn_leave.bmp" 
+		image_stay="xml\image\btn_stay.bmp"
+		image_down="xml\image\btn_down.bmp" />
+		
+    <reference>
+        <resources path=".\resource.res" />
+    </reference>
+</style>

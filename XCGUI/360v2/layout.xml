@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-布局文件-->
+<window left="0" top="0" width="850" height="625" value="炫彩界面库 - 我的窗口名">
+    <NCClient />
+    <client>
+        <propertyPage id="@ID_PROPERTYPAGE" left="0" top="13" width="834" height="526" labelHeight="82" labelSpacing="1">
+            <propertyPageLabel id="@ID_LABEL1" left="10" top="10" width="100" height="200" value="电脑体验" labelWidth="74">
+                <picture id="@ID_PAGE1" left="0" top="0" width="100" height="100">
+                    <button id="@ID_NO" left="210" top="210" width="150" height="65" value="立即体验" />
+                    <picture id="@ID_PICTURE2" left="31" top="37" width="126" height="109" />
+                    <static id="@ID_STATIC2" left="180" top="59" width="93" height="20" value="电脑体验得分:0" />
+                    <static id="@ID_NO" left="180" top="89" width="248" height="20" styleClass="CSS_STATIC_RED" value="您的电脑处于非常危险状态,请立即体验修复!" />
+                    <picture id="@ID_PICTURE3" left="575" top="26" width="242" height="64" />
+                </picture>
+            </propertyPageLabel>
+            <propertyPageLabel id="@ID_LABEL2" left="10" top="10" width="100" height="200" value="查杀木马" labelWidth="74">
+                <picture id="@ID_PAGE2" left="0" top="0" width="100" height="100">
+                    <button id="@ID_NO" left="210" top="210" width="150" height="65" value="查杀木马" />
+                </picture>
+            </propertyPageLabel>
+            <propertyPageLabel id="@ID_LABEL3" left="10" top="10" width="100" height="200" value="清理插件" labelWidth="74">
+                <picture id="@ID_PAGE3" left="0" top="0" width="100" height="100">
+                    <button id="@ID_NO" left="210" top="210" width="150" height="65" value="清理插件" />
+                </picture>
+            </propertyPageLabel>
+        </propertyPage>
+        <static id="@ID_NO" left="47" top="541" width="137" height="20" styleClass="CSS_STATIC1" value="主程序版本:8.5.0.2001" />
+        <static id="@ID_NO" left="182" top="541" width="141" height="20" styleClass="CSS_STATIC1" value="备用木马库:2012-02-18" />
+        <static id="@ID_NO" left="322" top="541" width="59" height="20" styleClass="CSS_STATIC1" value="检查更新" />
+        <static id="@ID_NO" left="380" top="541" width="206" height="20" styleClass="CSS_STATIC1" value="炫彩界面库演示程序:www.xcgui.com" />
+        <picture id="@ID_PICTURE1" left="654" top="0" width="180" height="94" />
+    </client>
+    <reference>
+        <style path=".\style.css" />
+        <resources path=".\resources.res" />
+    </reference>
+</window>

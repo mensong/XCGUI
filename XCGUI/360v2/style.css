@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-样式文件-->
+<style>
+    <window type="all" name="CSS_WINDOW" bDragBorder="false" bMaxButton="false" image="360v2\image\frame.jpg" />
+    <static type="class" name="CSS_STATIC1" bTransparent="true" textColor="#FB9E04" />
+    <static type="class" name="CSS_STATIC_RED" bTransparent="true" textColor="#FF0000" />
+    <propertyPageLabel type="id" id="@ID_LABEL1" name="CSS_LABEL1" bTransparent="true" iconAlign="top" icon="360v2\image\ico_Examine.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPageLabel type="id" id="@ID_LABEL2" name="CSS_LABEL2" bTransparent="true" iconAlign="top" icon="360v2\image\ico_dsmain.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPageLabel type="id" id="@ID_LABEL3" name="CSS_LABEL3" bTransparent="true" iconAlign="top" icon="360v2\image\ico_PluginCleaner.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPageLabel type="id" id="@ID_LABEL4" name="CSS_LABEL4" bTransparent="true" iconAlign="top" icon="360v2\image\ico_VulRepair.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPageLabel type="id" id="@ID_LABEL5" name="CSS_LABEL5" bTransparent="true" iconAlign="top" icon="360v2\image\ico_SysRepair.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPageLabel type="id" id="@ID_LABEL6" name="CSS_LABEL6" bTransparent="true" iconAlign="top" icon="360v2\image\ico_TraceCleaner.png" image_leave="360v2\image\transparent.png" image_stay="360v2\image\toolbar_hover.png" image_down="360v2\image\toolbar_pushed.png" image_check="360v2\image\toolbar_pushed.png" />
+    <propertyPage type="id" id="@ID_PROPERTYPAGE" name="CSS_PROPERTYPAGE" bTransparent="true" bBorder="false" />
+    <picture type="id" id="@ID_PAGE1" name="CSS_PAGE1" bTransparent="true" bBorder="false" image="@ID_page1_bk" />
+    <picture type="id" id="@ID_PAGE2" name="CSS_PAGE2" bTransparent="true" bBorder="false" image="@ID_page1_bk" />
+    <picture type="id" id="@ID_PAGE3" name="CSS_PAGE3" bTransparent="true" bBorder="false" image="@ID_page1_bk" />
+    <picture type="id" id="@ID_PICTURE1" name="CSS_PICTURE1" bTransparent="true" image="360v2\image\logo.png" />
+    <picture type="id" id="@ID_PICTURE2" name="CSS_PICTURE2" bTransparent="true" image="360v2\image\Radar0.png" />
+    <picture type="id" id="@ID_PICTURE3" name="CSS_PICTURE3" bTransparent="true" image="360v2\image\all_opened.png" />
+    <static type="id" id="@ID_STATIC2" name="CSS_STATIC2" bTransparent="true" textColor="#535353" />
+    <reference>
+        <resources path=".\resources.res" />
+    </reference>
+</style>

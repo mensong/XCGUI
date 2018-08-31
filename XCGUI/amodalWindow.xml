@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+
+<!--窗口-->
+<modalWindow left="200" top="200" width="380" height="250" value="新建窗口UI布局文件">
+	<static id="0" left="20" top="20" width="60" height="15" value="窗口类型:"></static>
+	<radio  id="205" left="100" top="22" width="45" height="15" value="窗口"></radio>
+	<radio  id="206" left="200" top="22" width="70" height="15" value="模态窗口"></radio>
+
+	<static  left="20" top="52" width="60" height="15" value="文件名称:"></static>
+	<edit    id="200"  left="100" top="50" width="200" height="20"></edit>
+	
+	<static  id="0"  left="20" top="82" width="80" height="15" value="UI样式表名称:"></static>
+	<edit    id="207"  left="100" top="80" width="200" height="20" value="当前版本未使用,不需要填写"></edit>
+
+	<static  id="0"   left="20" top="110" width="60" height="15" value="本地位置:"></static>
+	<edit    id="201" left="20" top="130" width="280" height="20"></edit>
+	<button  id="202" left="305" top="130" width="40" height="20" value="浏览"></button>
+
+	<button  id="203" left="100" top="170" width="60" height="20" value="确定"></button>
+	<button  id="204" left="200" top="170" width="60" height="20" value="取消"></button>
+</modalWindow>
+
+<!--关联UI样式表文件列表,可关联多个-->
+<relateStyle path=style1.xml></relateStyle>
+<relateStyle path=style2.xml></relateStyle>
+<relateStyle path=style3.xml></relateStyle>

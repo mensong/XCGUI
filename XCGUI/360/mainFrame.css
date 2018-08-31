@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-样式文件-->
+<style>
+    <button type="all" name="CSS_button" />
+    <window type="all" name="CSS_mainFrame" captionHeight="24" bDragBorder="false" bDragWindow="true" bMaxButton="true" imageNC="@ID_frame" />
+    <static type="class" name="CSS_STATIC1" bTransparent="true" textColor="#F2CA0D" />
+    <picture type="class" name="CSS_PAGE" bTransparent="true" image="@IDI_page1_bk" />
+    <button type="class" name="CSS_BUTTON_TEST" image_leave="F:\项目123" />
+    <button type="id" id="@IDB_TAB1" name="CSS_TAB1" bFocus="false" bTransparent="true" textColor="#FFFF00" bCheck="true" textAlign="center|top" iconAlign="top" icon="360/image/ico_Examine.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB2" name="CSS_TAB2" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_dsmain.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB3" name="CSS_TAB3" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_PluginCleaner.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB4" name="CSS_TAB4" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_VulRepair.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB5" name="CSS_TAB5" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_SysRepair.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB6" name="CSS_TAB6" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_TraceCleaner.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB7" name="CSS_TAB7" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_SpeedupOpt.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB8" name="CSS_TAB8" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_AdvTools.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <button type="id" id="@IDB_TAB9" name="CSS_TAB9" bFocus="false" bTransparent="true" textColor="#FFFF00" textAlign="center|top" iconAlign="top" icon="360/image/ico_softmgr.png" image_leave="360/image/transparent.png" image_stay="360/image/toolbar_hover.png" image_down="360/image/toolBar_pushed.png" image_check="360/image/toolBar_pushed.png" />
+    <picture type="id" id="@IDP_PICTURE1" name="CSS_PICTURE1" bTransparent="true" image="360/image/logo.png" />
+    <picture type="id" id="@IDP_PICTURE2" name="CSS_PICTURE2" bTransparent="true" image="360/image/Radar0.png" />
+    <static type="id" id="@IDS_STATIC2" name="CSS_STATIC2" bTransparent="true" textColor="#5A5A5A" />
+    <static type="id" id="@IDS_STATIC3" name="CSS_STATIC3" bTransparent="true" textColor="#FF0000" />
+    <picture type="id" id="@IDP_PICTURE3" name="CSS_PICTURE3" bTransparent="true" image="360/image/all_opened.png" />
+    <button type="id" id="@IDB_PAGE2_BTN1" name="CSS_PAGE2_BTN1" bFocus="false" bTransparent="true" image_leave="360/image/page2_btn1_leave.png" image_stay="360/image/page2_btn1_stay.png" image_down="360/image/page2_btn1_down.png" />
+    <reference>
+        <resources path=".\mainFrame.res" />
+    </reference>
+</style>

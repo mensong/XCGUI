@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="example">
+      <UniqueIdentifier>{ba6afd0f-6d8c-4fef-985a-eb878921b8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{37cd78c8-1fc9-46b3-acdd-a2ffef41dad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{fd217c53-1744-44eb-96ba-2e6ff63d438c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="定义文件">
+      <UniqueIdentifier>{ca8977a2-3560-4fba-bece-7bc3a089d461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GuiDesigner">
+      <UniqueIdentifier>{15992765-f29c-4af8-90d9-4dd27a6abbd8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="button.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="check.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chooseColor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="comboBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="comboBoxWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dateTimeWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="edit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="editFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ele.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="flash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="font_x.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="frameWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gif.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="groupBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="image_x.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imageList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layoutCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="License.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="listBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="listView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="menuBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modalWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="monthCal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="outlook.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="picture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Pier.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="progressBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="propertyGrid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="propertyPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="radio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="richEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scrollBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scrollView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SendEMail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sliderBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="staticX.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tabBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="textLink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="toolBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="webBrowser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xarray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xcapi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xcapp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XCGUI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xmultiTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xstring.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_button.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_check.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_chooseColor.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_comboBox.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_dateTime.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_edit.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_ele.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example_frameWnd.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_gif.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_groupBox.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_list.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_listBox.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_listView.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_menu.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_menuBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_modalWindow.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_monthCal.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_outlook.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_picture.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_plus.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_PPage.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_progressBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_propertyGrid.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_radio.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_richEdit.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_scrollBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_scrollView.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_sliderBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_tabBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_textLink.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_toolBar.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_transparent.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_tree.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_web.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_window.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_xml.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_xmlTest.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\example_XMtree.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\main.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinystr.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxml.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiDesigner\xml.cpp">
+      <Filter>GuiDesigner</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiDesigner\xml_main.cpp">
+      <Filter>GuiDesigner</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiDesigner\xmlRes.cpp">
+      <Filter>GuiDesigner</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\unzip.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\ioapi.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\iowin32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zip.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="array_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="check.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chooseColor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="comboBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="comboBoxWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dateTimeWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="edit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="editFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ele.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="font_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="frameWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gif.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="groupBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="image_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imageList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layoutCell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="listBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="listView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="menuBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modalWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="monthCal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="multiTree_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="outlook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="picture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Pier.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="progressBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="propertyGrid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="propertyPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="radio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="richEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scrollBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scrollView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SendEMail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sliderBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="static_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="string_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tabBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textLink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="toolBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webBrowser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\unzip.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>定义文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xcapi.h">
+      <Filter>定义文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xcapp.h">
+      <Filter>定义文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xcdef.h">
+      <Filter>定义文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xcgui.h">
+      <Filter>定义文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiDesigner\xml.h">
+      <Filter>GuiDesigner</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiDesigner\xml_main.h">
+      <Filter>GuiDesigner</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiDesigner\xmlRes.h">
+      <Filter>GuiDesigner</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\crypt.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\ioapi.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\iowin32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\mztools.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zip.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="small.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="XCGUI.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="apidef.def">
+      <Filter>定义文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XCGUI.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

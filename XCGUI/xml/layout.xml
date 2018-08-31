@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!--炫彩界面库-布局文件-->
+<window left="0" top="0" width="381" height="304" value="炫彩界面库-窗口">
+    <NCClient />
+    <client>
+        <button id="@IDB_BUTTON1" left="19" top="79" width="124" height="35" value="button1" />
+        <button id="@ID_NO" left="23" top="43" width="60" height="25" styleClass="classButton" value="button2" />
+        <edit id="@ID_NO" left="23" top="15" width="100" height="20" />
+        <scrollBar id="@ID_NO" left="20" top="117" width="100" height="20" />
+        <dateTime id="@ID_NO" left="20" top="148" width="100" height="20" />
+        <chooseColor id="@ID_NO" left="20" top="183" width="100" height="20" />
+        <element id="@ID_NO" left="151" top="15" width="100" height="100">
+            <button id="@IDB_BUTTON2" left="20" top="33" width="65" height="30" value="button" />
+        </element>
+        <sliderBar id="@ID_NO" left="157" top="154" width="100" height="20" />
+        <progressBar id="@ID_NO" left="154" top="188" width="100" height="20" />
+    </client>
+    <reference>
+        <style path=".\Style.css" />
+        <resources path=".\resource.res" />
+    </reference>
+</window>
