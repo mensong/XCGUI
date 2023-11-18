@@ -273,8 +273,8 @@ LRESULT CALLBACK XCGUI_WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lP
 {
 	if (WM_CREATE == message)
 	{
-		LONG L = (LONG)(((LPCREATESTRUCT)lParam)->lpCreateParams);
-		SetWindowLong(hWnd, GWLP_USERDATA, L);
+		LONG_PTR L = (LONG_PTR)(((LPCREATESTRUCT)lParam)->lpCreateParams);
+		SetWindowLongPtr(hWnd, GWLP_USERDATA, L);
 
 		window_ *pWindow = (window_*)(((LPCREATESTRUCT)lParam)->lpCreateParams);
 		if (XC_IsHWINDOW((HWINDOW)pWindow))
@@ -290,7 +290,7 @@ LRESULT CALLBACK XCGUI_WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lP
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
 
-	window_ *pWindow = (window_*)GetWindowLong(hWnd, GWLP_USERDATA);
+	window_ *pWindow = (window_*)GetWindowLongPtr(hWnd, GWLP_USERDATA);
 	if (FALSE == XC_IsHWINDOW((HWINDOW)pWindow))
 		return DefWindowProc(hWnd, message, wParam, lParam);
 

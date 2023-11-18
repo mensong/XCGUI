@@ -107,11 +107,11 @@ int WINAPI XModalWnd_DoModal(HWINDOW hWindow)     //Æô¶¯Ä£Ì¬´°¿Ú
 
 	while (hWndParent)
 	{
-		LONG style = GetWindowLong(hWndParent, GWL_STYLE);
+		LONG_PTR style = GetWindowLongPtr(hWndParent, GWL_STYLE);
 		if (!(style & WS_DISABLED))
 		{
 			style = style | WS_DISABLED;
-			SetWindowLong(hWndParent, GWL_STYLE, style);
+			SetWindowLongPtr(hWndParent, GWL_STYLE, style);
 			XArray_Add(pModalWnd->hArrayWnd, hWndParent);
 		}
 		hWndParent = GetParent(hWndParent);
@@ -156,11 +156,11 @@ BOOL CALLBACK ModalWnd_OnClose(HWINDOW hWindow)
 			HWND hWndParent = (HWND)XArray_GetAt(pModalWnd->hArrayWnd, i);
 			if (IsWindow(hWndParent))
 			{
-				LONG style = GetWindowLong(hWndParent, GWL_STYLE);
+				LONG_PTR style = GetWindowLongPtr(hWndParent, GWL_STYLE);
 				if (style & WS_DISABLED)
 				{
 					style = style & (~WS_DISABLED);
-					SetWindowLong(hWndParent, GWL_STYLE, style);
+					SetWindowLongPtr(hWndParent, GWL_STYLE, style);
 				}
 			}
 		}

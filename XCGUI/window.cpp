@@ -501,11 +501,11 @@ DWORD WINAPI XWnd_SetIcon(HWINDOW hWindow, HICON hIcon, BOOL bBigIcon)
 	IsWindowDebug(hWindow, __FUNCTION__);
 	if (bBigIcon)
 	{
-		return SetClassLong(((window_*)hWindow)->hWnd, GCLP_HICON, (LONG)hIcon);
+		return SetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICON, (LONG_PTR)hIcon);
 	}
 	else
 	{
-		return SetClassLong(((window_*)hWindow)->hWnd, GCLP_HICONSM, (LONG)hIcon);
+		return SetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICONSM, (LONG_PTR)hIcon);
 	}
 }
 
@@ -522,11 +522,11 @@ DWORD WINAPI XWnd_SetIcon2(HWINDOW hWindow, wchar_t *pFileName, BOOL bBigIcon)
 	HICON hIcon = (HICON)LoadImage(hIns, pFileName, IMAGE_ICON, 16, 16, LR_LOADFROMFILE);
 	if (bBigIcon)
 	{
-		return SetClassLong(((window_*)hWindow)->hWnd, GCLP_HICON, (LONG)hIcon);
+		return SetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICON, (LONG_PTR)hIcon);
 	}
 	else
 	{
-		return SetClassLong(((window_*)hWindow)->hWnd, GCLP_HICONSM, (LONG)hIcon);
+		return SetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICONSM, (LONG_PTR)hIcon);
 	}
 }
 
@@ -539,11 +539,11 @@ HICON WINAPI XWnd_GetIcon(HWINDOW hWindow, BOOL bBigIcon) //获取窗口图标
 	IsWindowDebug(hWindow, __FUNCTION__);
 	if (bBigIcon)
 	{
-		return (HICON)GetClassLong(((window_*)hWindow)->hWnd, GCLP_HICON);
+		return (HICON)GetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICON);
 	}
 	else
 	{
-		return (HICON)GetClassLong(((window_*)hWindow)->hWnd, GCLP_HICONSM);
+		return (HICON)GetClassLongPtr(((window_*)hWindow)->hWnd, GCLP_HICONSM);
 	}
 }
 
@@ -845,21 +845,21 @@ void WINAPI XWnd_EnableDragBorder(HWINDOW hWindow, BOOL bDrag)  //使用拖动边框
 	IsWindowDebug(hWindow, __FUNCTION__);
 	if (bDrag)
 	{
-		LONG style = GetWindowLong(((window_*)hWindow)->hWnd, GWL_STYLE);
+		LONG_PTR style = GetWindowLongPtr(((window_*)hWindow)->hWnd, GWL_STYLE);
 		if (FALSE == (style & WS_THICKFRAME))
 		{
 			style |= WS_THICKFRAME;
-			SetWindowLong(((window_*)hWindow)->hWnd, GWL_STYLE, style);
+			SetWindowLongPtr(((window_*)hWindow)->hWnd, GWL_STYLE, style);
 		}
 		((window_*)hWindow)->xcStyle |= XC_SY_DRAG_BORDER;
 	}
 	else
 	{
-		LONG style = GetWindowLong(((window_*)hWindow)->hWnd, GWL_STYLE);
+		LONG_PTR style = GetWindowLongPtr(((window_*)hWindow)->hWnd, GWL_STYLE);
 		if (style & WS_THICKFRAME)
 		{
 			style &= (~WS_THICKFRAME);
-			SetWindowLong(((window_*)hWindow)->hWnd, GWL_STYLE, style);
+			SetWindowLongPtr(((window_*)hWindow)->hWnd, GWL_STYLE, style);
 		}
 		((window_*)hWindow)->xcStyle &= (~XC_SY_DRAG_BORDER);
 	}
@@ -917,15 +917,15 @@ void WINAPI XWnd_EnableMinButton(HWINDOW hWindow, BOOL bEnable, BOOL bRedraw) //
 {
 	IsWindowDebug(hWindow, __FUNCTION__);
 	window_ *pWindow = WINDOW(hWindow);
-	int dwStyle = 0;
+	LONG_PTR dwStyle = 0;
 	if (bEnable)
 	{
 		if (pWindow->hMinimize) return;
 
-		dwStyle = GetWindowLong(pWindow->hWnd, GWL_STYLE);
+		dwStyle = GetWindowLongPtr(pWindow->hWnd, GWL_STYLE);
 		if (FALSE == (dwStyle & WS_MINIMIZEBOX))
 			dwStyle = dwStyle | WS_MINIMIZEBOX;
-		SetWindowLong(pWindow->hWnd, GWL_STYLE, dwStyle);
+		SetWindowLongPtr(pWindow->hWnd, GWL_STYLE, dwStyle);
 
 		pWindow->hMinimize = XBtn_Create(1, 1, 25, 20, L"-");
 		XWnd_AddEleNC(hWindow, pWindow->hMinimize);
@@ -937,10 +937,10 @@ void WINAPI XWnd_EnableMinButton(HWINDOW hWindow, BOOL bEnable, BOOL bRedraw) //
 	{
 		if (NULL == pWindow->hMinimize) return;
 
-		dwStyle = GetWindowLong(pWindow->hWnd, GWL_STYLE);
+		dwStyle = GetWindowLongPtr(pWindow->hWnd, GWL_STYLE);
 		if (dwStyle & WS_MINIMIZEBOX)
 			dwStyle = dwStyle & ~WS_MINIMIZEBOX;
-		SetWindowLong(pWindow->hWnd, GWL_STYLE, dwStyle);
+		SetWindowLongPtr(pWindow->hWnd, GWL_STYLE, dwStyle);
 
 		XEle_Destroy(pWindow->hMinimize);
 		pWindow->hMinimize = NULL;
@@ -960,15 +960,15 @@ void WINAPI XWnd_EnableMaxButton(HWINDOW hWindow, BOOL bEnable, BOOL bRedraw) //
 {
 	IsWindowDebug(hWindow, __FUNCTION__);
 	window_ *pWindow = WINDOW(hWindow);
-	int dwStyle = 0;
+	LONG_PTR dwStyle = 0;
 	if (bEnable)
 	{
 		if (pWindow->hMaxinize) return;
 
-		dwStyle = GetWindowLong(pWindow->hWnd, GWL_STYLE);
+		dwStyle = GetWindowLongPtr(pWindow->hWnd, GWL_STYLE);
 		if (FALSE == (dwStyle & WS_MAXIMIZEBOX))
 			dwStyle = dwStyle | WS_MAXIMIZEBOX;
-		SetWindowLong(pWindow->hWnd, GWL_STYLE, dwStyle);
+		SetWindowLongPtr(pWindow->hWnd, GWL_STYLE, dwStyle);
 
 		pWindow->hMaxinize = XBtn_Create(1, 1, 25, 20, L"o");
 		XWnd_AddEleNC(hWindow, pWindow->hMaxinize);
@@ -980,10 +980,10 @@ void WINAPI XWnd_EnableMaxButton(HWINDOW hWindow, BOOL bEnable, BOOL bRedraw) //
 	{
 		if (NULL == pWindow->hMaxinize) return;
 
-		dwStyle = GetWindowLong(pWindow->hWnd, GWL_STYLE);
+		dwStyle = GetWindowLongPtr(pWindow->hWnd, GWL_STYLE);
 		if (dwStyle & WS_MAXIMIZEBOX)
 			dwStyle = dwStyle & ~WS_MAXIMIZEBOX;
-		SetWindowLong(pWindow->hWnd, GWL_STYLE, dwStyle);
+		SetWindowLongPtr(pWindow->hWnd, GWL_STYLE, dwStyle);
 
 		XEle_Destroy(pWindow->hMaxinize);
 		pWindow->hMaxinize = NULL;
@@ -1127,9 +1127,9 @@ void WINAPI XWnd_SetTransparentFlag(HWINDOW hWindow, int flag)  //设置透明窗口
 	case XC_WIND_TRANSPARENT_NO:
 	{
 		//关闭窗口分层样式
-		DWORD dwExStyle = GetWindowLong(pWindow->hWnd, GWL_EXSTYLE);
+		LONG_PTR dwExStyle = GetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE);
 		if ((dwExStyle & 0x80000) == 0x80000)
-			SetWindowLong(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
+			SetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
 
 		if (pWindow->xcStyle & XC_SY_ROUND)
 		{
@@ -1156,18 +1156,18 @@ void WINAPI XWnd_SetTransparentFlag(HWINDOW hWindow, int flag)  //设置透明窗口
 	case XC_WIND_TRANSPARENT_SHAPED: //透明窗口,带透明通道,异型.
 	{
 		//启用窗口分层样式
-		DWORD dwExStyle = GetWindowLong(pWindow->hWnd, GWL_EXSTYLE);
+		LONG_PTR dwExStyle = GetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE);
 		if ((dwExStyle & 0x80000) != 0x80000) //WS_EX_LAYERED
-			SetWindowLong(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
+			SetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
 		pWindow->transparentFlag = flag;
 		XWnd_RedrawWnd(hWindow);
 	}break;
 	case XC_WIND_TRANSPARENT_SHADOW: //阴影窗口,带透明通道,边框阴影,窗口透明或半透明.
 	{
 		//启用窗口分层样式
-		DWORD dwExStyle = GetWindowLong(pWindow->hWnd, GWL_EXSTYLE);
+		LONG_PTR dwExStyle = GetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE);
 		if ((dwExStyle & 0x80000) != 0x80000) //WS_EX_LAYERED
-			SetWindowLong(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
+			SetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
 
 		pWindow->transparentFlag = flag;
 
@@ -1186,9 +1186,9 @@ void WINAPI XWnd_SetTransparentFlag(HWINDOW hWindow, int flag)  //设置透明窗口
 	case XC_WIND_TRANSPARENT_SIMPLE: //透明窗口,不带透明通道,指定半透明度,指定透明色.
 	{
 		//启用窗口分层样式
-		DWORD dwExStyle = GetWindowLong(pWindow->hWnd, GWL_EXSTYLE);
+		LONG_PTR dwExStyle = GetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE);
 		if ((dwExStyle & 0x80000) != 0x80000) //WS_EX_LAYERED
-			SetWindowLong(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
+			SetWindowLongPtr(pWindow->hWnd, GWL_EXSTYLE, dwExStyle ^ 0x80000);
 
 		pWindow->transparentFlag = flag;
 		SetLayeredWindowAttributes(pWindow->hWnd, pWindow->transparentColor, pWindow->transparentAlpha, LWA_COLORKEY | LWA_ALPHA);
@@ -5845,7 +5845,7 @@ void Wnd_DrawCaption(HWINDOW hWindow, HDRAW hDraw)
 	int halfY = rcTitle.bottom / 2; //中间坐标
 
 	//绘制图标
-	HICON hIcon = (HICON)GetClassLong(pWindow->hWnd, GCLP_HICONSM);
+	HICON hIcon = (HICON)GetClassLongPtr(pWindow->hWnd, GCLP_HICONSM);
 	if (hIcon && pWindow->xcStyle & XC_SY_DRAW_CAPTION_ICON)
 	{
 		XDraw_DrawIconEx_(hDraw, 8, halfY - pWindow->iconSize.cy / 2, hIcon, pWindow->iconSize.cx, pWindow->iconSize.cy, 0, 0, DI_NORMAL);
@@ -6087,7 +6087,7 @@ void Wnd_DrawCaptionImageNC(HWINDOW hWindow, HDRAW hDraw)
 		int halfY = rcTitle.bottom / 2; //中间坐标
 
 		//绘制图标
-		HICON hIcon = (HICON)GetClassLong(pWindow->hWnd, GCLP_HICONSM);
+		HICON hIcon = (HICON)GetClassLongPtr(pWindow->hWnd, GCLP_HICONSM);
 		if (hIcon && pWindow->xcStyle & XC_SY_DRAW_CAPTION_ICON)
 		{
 			XDraw_DrawIconEx_(hDraw, 8, halfY - pWindow->iconSize.cy / 2, hIcon, pWindow->iconSize.cx, pWindow->iconSize.cy, 0, 0, DI_NORMAL);

@@ -305,15 +305,18 @@ void Resource_Release()
 	{
 		if (resource_manager.pArrayEle[i].pNode)
 		{
-			pNode = resource_manager.pArrayEle[i].pNode;
+			pNode = resource_manager.pArrayEle[i].pNode;			
 			while (pNode)
 			{
 				pDel = pNode;
 				pNode = pNode->pNext;
 				free(pDel);
 			}
+			resource_manager.pArrayEle[i].pNode = NULL;
+			resource_manager.pArrayEle[i].count = 0;
 		}
 	}
 	free(resource_manager.pArrayEle);
+	resource_manager.pArrayEle = NULL;
 }
 

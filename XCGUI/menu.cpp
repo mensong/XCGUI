@@ -1578,7 +1578,7 @@ VOID CALLBACK MenuWnd_TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dw
 {
 	if (IDT_MENU == idEvent) //从主菜单弹出
 	{
-		window_ *pWindow = (window_*)GetWindowLong(hwnd, GWLP_USERDATA);
+		window_ *pWindow = (window_*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
 		popupMenuWindow_ *pObj = (popupMenuWindow_*)pWindow;
 
 		if (pObj->selItemID == pObj->enterItemID) //对比确保弹出子菜单时选择项正确
@@ -2179,7 +2179,7 @@ VOID CALLBACK MenuChildWnd_TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWO
 {
 	if (IDT_MENU2 == idEvent)
 	{
-		window_ *pWindow = (window_*)GetWindowLong(hwnd, GWLP_USERDATA);
+		window_ *pWindow = (window_*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
 		if (NULL == pWindow)
 		{
 			return;

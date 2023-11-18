@@ -151,7 +151,7 @@ BOOL CALLBACK OnWndSize(HWINDOW hWindow,UINT flags,SIZE *pSize)
 	return FALSE;
 }
 
-LONG prevProc1=NULL;
+LONG_PTR prevProc1=NULL;
 HHOOK hHook=NULL;
 LRESULT CALLBACK MyWndProc1(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -173,8 +173,8 @@ LRESULT CALLBACK CallWndProc(int nCode, WPARAM wParam, LPARAM lParam)
 
 			if(0==strcmp(className,"Internet Explorer_Server"))
 			{
-				prevProc1=GetWindowLong(pInfo->hwnd,GWLP_WNDPROC);
-				SetWindowLong(pInfo->hwnd,GWLP_WNDPROC,(LONG)MyWndProc1);
+				prevProc1=GetWindowLongPtr(pInfo->hwnd,GWLP_WNDPROC);
+				SetWindowLongPtr(pInfo->hwnd,GWLP_WNDPROC,(LONG_PTR)MyWndProc1);
 			}
 		}
 	}
