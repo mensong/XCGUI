@@ -616,7 +616,7 @@ BOOL WINAPI XListView_GetGroupRect(HELE hEle, int groupIndex, out_ RECT *pRect) 
 /// @param itemIndex 项索引.
 /// @param data 绑定数据.
 /// @return 成功返回TRUE,否则相反.
-BOOL WINAPI XListView_SetItemData(HELE hEle, int groupIndex, int itemIndex, int data) //设置项绑定数据
+BOOL WINAPI XListView_SetItemData(HELE hEle, int groupIndex, int itemIndex, void* data) //设置项绑定数据
 {
 	IsListViewDebug(hEle, __FUNCTION__);
 	//listView_ *pListView=(listView_*)hEle;
@@ -634,7 +634,7 @@ BOOL WINAPI XListView_SetItemData(HELE hEle, int groupIndex, int itemIndex, int 
 /// @param groupIndex 组索引.
 /// @param itemIndex 项索引.
 /// @return 项绑定数据，失败返回-1.
-int  WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex) //获取项绑定数据
+void* WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex) //获取项绑定数据
 {
 	IsListViewDebug(hEle, __FUNCTION__);
 	//listView_ *pListView=(listView_*)hEle;
@@ -643,7 +643,7 @@ int  WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex) //获
 	{
 		return pItem->userData;
 	}
-	return -1;
+	return NULL;
 }
 
 /// @brief 设置组绑定数据.
@@ -651,7 +651,7 @@ int  WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex) //获
 /// @param groupIndex 组索引.
 /// @param data 绑定数据.
 /// @return 成功返回TRUE,否则相反.
-BOOL WINAPI XListView_SetGroupData(HELE hEle, int groupIndex, int data) //设置组绑定数据
+BOOL WINAPI XListView_SetGroupData(HELE hEle, int groupIndex, void* data) //设置组绑定数据
 {
 	IsListViewDebug(hEle, __FUNCTION__);
 	//listView_ *pListView=(listView_*)hEle;
@@ -961,7 +961,7 @@ int  WINAPI XListView_GetGroupHeight(HELE hEle) //获取组高度
 /// @param hEle 元素句柄.
 /// @param groupIndex 组索引.
 /// @return 组绑定数据,失败返回-1.
-int  WINAPI XListView_GetGroupData(HELE hEle, int groupIndex) //获取组绑定数据
+void* WINAPI XListView_GetGroupData(HELE hEle, int groupIndex) //获取组绑定数据
 {
 	IsListViewDebug(hEle, __FUNCTION__);
 	listView_ *pListView = (listView_*)hEle;
@@ -970,7 +970,7 @@ int  WINAPI XListView_GetGroupData(HELE hEle, int groupIndex) //获取组绑定数据
 	{
 		return pGroup->userData;
 	}
-	return -1;
+	return NULL;
 }
 
 /// @brief 删除项.
@@ -2045,7 +2045,7 @@ BOOL CALLBACK ListView_OnEleMouseMove(HELE hEle, UINT flags, POINT *pPt)
 
 			HWINDOW hWindow = XWnd_CreateWindowEx(WS_EX_TOOLWINDOW, NULL, L"dragItem", WS_POPUP, x, y, cx, cy, hWnd, 0);
 
-			XWnd_SetUserData(hWindow, (int)hEle);
+			XWnd_SetUserData(hWindow, (void*)hEle);
 			XWnd_RegisterMessage(hWindow, WM_PAINT, ListView_OnDrawWindow_DragItem);
 
 			XWnd_RegisterMessage(hWindow, WM_MOUSEMOVE, ListView_OnWndMouseMove_DragItem);

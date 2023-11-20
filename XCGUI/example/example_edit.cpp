@@ -7,7 +7,7 @@
 \**************************************************************************/
 #include "stdafx.h"
 
-#if 1
+#if 0
 
 HELE hEdit;
 BOOL CALLBACK MyEventBtnClick(HELE hEle,HELE hEventEle) //按钮点击事件

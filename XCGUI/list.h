@@ -34,7 +34,7 @@ struct listItem_  //项
 	int state;   //状态
 	int index;   //所处列表中的索引
 
-	int userData;  //用户数据
+	void*	userData;  //用户数据
 
 	BOOL    bCheck;    //复选框是否选择
 	RECT    rcCheck;   //复选框
@@ -117,7 +117,7 @@ XC_API BOOL WINAPI XList_SetSelectItem(HELE hEle, int index);   //设置选择项
 XC_API void WINAPI XList_SetSelectItemAll(HELE hEle);     //全选
 XC_API void WINAPI XList_SetSpacingLeft(HELE hEle, int spacing);  //设置内容左间距
 XC_API void WINAPI XList_SetSpacingRight(HELE hEle, int spacing); //设置内容右间距
-XC_API void WINAPI XList_SetItemData(HELE hEle, int index, int data);   //设置用户数据
+XC_API void WINAPI XList_SetItemData(HELE hEle, int index, void* data);   //设置用户数据
 XC_API BOOL WINAPI XList_SetItemBindEle(HELE hEle, int item, int subItem, itemBindEle_ *pInfo); //绑定元素
 XC_API void WINAPI XList_SetColumnMinWidth(HELE hEle, int index, int minWidth); //设置列最小宽度
 
@@ -132,7 +132,7 @@ XC_API HXCGUI WINAPI XList_GetImageList(HELE hEle);     //获取图片列表
 XC_API wchar_t* WINAPI XList_GetItemText(HELE hEle, int index, int subItem); //获取项文本
 XC_API int WINAPI XList_GetItemImage(HELE hEle, int item, int subItem); //获取子项图片
 XC_API int WINAPI XList_GetItemHeight(HELE hEle);       //获取项高
-XC_API int WINAPI XList_GetItemData(HELE hEle, int index);   //设置用户数据
+XC_API void* WINAPI XList_GetItemData(HELE hEle, int index);   //设置用户数据
 XC_API int WINAPI XList_GetSelectCount(HELE hEle);      //获取选择项数量
 XC_API int WINAPI XList_GetSelectItem(HELE hEle);       //获取选择项
 XC_API int WINAPI XList_GetSelectAllItem(HELE hEle, out_ int *pArray, int arrayLength);  //获取所有选择项

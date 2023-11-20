@@ -1965,7 +1965,7 @@ BOOL Ele_ConvMsgTimerEx(HELE hEle, eleMsgOrEvent_Header_ *pMsgHeader, WPARAM wPa
 			if (((pFunClassEventMsg)pFunT->pFun)(&event_, xc_fun_b_e_i_i))
 				return TRUE;
 		}
-		else if (((pFunEleTimerEx)pFunT->pFun)(hEle, wParam, lParam))
+		else if (((pFunEleTimerEx)pFunT->pFun)(hEle, wParam, (void*)lParam))
 		{
 			return TRUE;
 		}
@@ -4978,19 +4978,19 @@ BOOL WINAPI XEle_IsChildEle(HELE hEle, HELE hChild)  //判断指定元素是否为子元素
 	return FALSE;
 }
 
-void WINAPI XEle_SetUserData(HELE hEle, int data)  //设置用户数据
+void WINAPI XEle_SetUserData(HELE hEle, void* data)  //设置用户数据
 {
 	IsEleDebug(hEle, __FUNCTION__);
 	((ele_*)hEle)->userData = data;
 }
 
-int WINAPI XEle_GetUserData(HELE hEle)  //获取用户数据
+void* WINAPI XEle_GetUserData(HELE hEle)  //获取用户数据
 {
 	IsEleDebug(hEle, __FUNCTION__);
 	return ((ele_*)hEle)->userData;
 }
 
-UINT WINAPI XEle_SetTimerEx(HELE hEle, UINT nIDEvent, UINT uElapse, int userData)
+UINT WINAPI XEle_SetTimerEx(HELE hEle, UINT nIDEvent, UINT uElapse, void* userData)
 {
 	IsEleDebug(hEle, __FUNCTION__);
 	return Timer_SetTimerElement(hEle, nIDEvent, uElapse, userData);

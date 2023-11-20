@@ -73,7 +73,7 @@ void Pier_AddCell(HELE hEle, layoutCell_ *pCell) //增加窗格
 
 	XArray_Add(pPier->hArrayList, pItem);
 
-	XEle_SetUserData(pItem->Child.hButton, (int)(&pItem->Child));
+	XEle_SetUserData(pItem->Child.hButton, (void*)(&pItem->Child));
 	XEle_RegisterEvent(pItem->Child.hButton, XE_BNCLICK, Pier_Btn_OnClick);
 
 	if (align_left == pPier->align || align_right == pPier->align)
@@ -127,7 +127,7 @@ void Pier_AddCellGroup(HELE hEle, layoutCell_ *pGroupCell) //增加组到码头
 
 			XArray_Add(pItem->hArrayList, pChild);
 
-			XEle_SetUserData(pChild->hButton, (int)pChild);
+			XEle_SetUserData(pChild->hButton, (void*)pChild);
 			XEle_RegisterEvent(pChild->hButton, XE_BNCLICK, Pier_Btn_OnClick);
 			XEle_RegisterMessage(pChild->hButton, XM_PAINT, Pier_Btn_OnEleDraw);
 		}

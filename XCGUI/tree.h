@@ -23,7 +23,7 @@ struct treeNode_  //树结点
 	int      selectImageId; //选择项 图片索引
 	BOOL     bExpand;   //是否展开结点
 	HSTRING  hString;   //文本
-	int      data;      //用户数据
+	void*	 data;      //用户数据
 
 	int      textWidth;  //文本宽度
 	int      state;      //状态
@@ -90,7 +90,7 @@ XC_API BOOL WINAPI XTree_IsExpand(HELE hEle, int id); //判断指定项是否展开
 XC_API void WINAPI XTree_SetSpacingLeft(HELE hEle, int left);   //设置左间隔
 XC_API void WINAPI XTree_SetSpacingTop(HELE hEle, int top);     //设置上间隔
 XC_API void WINAPI XTree_SetImageList(HELE hEle, HXCGUI hImageList); //设置图片列表
-XC_API void WINAPI XTree_SetItemData(HELE hEle, int id, int data);   //设置用户数据
+XC_API void WINAPI XTree_SetItemData(HELE hEle, int id, void* data);   //设置用户数据
 XC_API void WINAPI XTree_SetExpandButtonSize(HELE hEle, int size);   //设置展开按钮大小
 XC_API void WINAPI XTree_SetIndentation(HELE hEle, int width);  //设置子项缩进宽度
 XC_API void WINAPI XTree_SetSelectItem(HELE hEle, int id);     //设置选择项
@@ -99,7 +99,7 @@ XC_API void WINAPI XTree_SetItemImage(HELE hEle, int id, int imageId);  //设置项
 XC_API void WINAPI XTree_SetItemHeight(HELE hEle, int height); //设置项高度
 XC_API BOOL WINAPI XTree_SetItemBindEle(HELE hEle, int id, itemBindEle_ *pInfo); //绑定元素
 
-XC_API int WINAPI XTree_GetItemData(HELE hEle, int id); //获取用户数据
+XC_API void* WINAPI XTree_GetItemData(HELE hEle, int id); //获取用户数据
 XC_API int WINAPI XTree_GetItemHeight(HELE hEle);      //获取项高度
 XC_API int WINAPI XTree_GetSelectItem(HELE hEle);   //获取当前选择的项
 XC_API int WINAPI XTree_GetParentItem(HELE hEle, int id); //获取指定项的父项

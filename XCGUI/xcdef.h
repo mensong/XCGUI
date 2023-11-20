@@ -63,7 +63,7 @@ typedef BOOL(CALLBACK *pFunWndExitSizeMove)(HWINDOW hWindow);//WM_EXITSIZEMOVE
 typedef BOOL(CALLBACK *pFunWndMouseLeave)(HWINDOW hWindow); //WM_MOUSELEAVE
 typedef BOOL(CALLBACK *pFunWndSize)(HWINDOW hWindow, UINT flags, SIZE *pSize); //WM_SIZE
 typedef BOOL(CALLBACK *pFunWndTimer)(HWINDOW hWindow, UINT timerID, UINT uElapse); //定时器消息 WM_TIMER
-typedef BOOL(CALLBACK *pFunWndTimerEx)(HWINDOW hWindow, UINT timerID, int userData); //定时器消息 XWM_TIMER
+typedef BOOL(CALLBACK *pFunWndTimerEx)(HWINDOW hWindow, UINT timerID, void* userData); //定时器消息 XWM_TIMER
 
 typedef BOOL(CALLBACK *pFunWndSetFocus)(HWINDOW hWindow);    //窗口获得焦点 WM_SETFOCUS
 typedef BOOL(CALLBACK *pFunWndKillFocus)(HWINDOW hWindow);   //窗口失去焦点 WM_KILLFOCUS
@@ -92,7 +92,7 @@ typedef BOOL(CALLBACK *pFunEleLButtonDown)(HELE hEle, UINT flags, POINT *pPt);
 typedef BOOL(CALLBACK *pFunEleLButtonUp)(HELE hEle, UINT flags, POINT *pPt);
 typedef BOOL(CALLBACK *pFunEleRButtonDown)(HELE hEle, UINT flags, POINT *pPt);
 typedef BOOL(CALLBACK *pFunEleRButtonUp)(HELE hEle, UINT flags, POINT *pPt);
-typedef BOOL(CALLBACK *pFunEleTimerEx)(HELE hEle, UINT timerID, int userData);
+typedef BOOL(CALLBACK *pFunEleTimerEx)(HELE hEle, UINT timerID, void* userData);
 
 
 //元素事件处理函数

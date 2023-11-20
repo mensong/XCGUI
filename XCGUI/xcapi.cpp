@@ -583,17 +583,17 @@ void  WINAPI XC_Free(void *p)
 HARRAY  g_hArray_Timer = NULL;
 HANDLE  g_hThread_Loop = NULL;
 CRITICAL_SECTION  g_timer_CriticalSection;
-UINT  Timer_SetTimerWindow(HWINDOW hWindow, UINT itemrID, UINT ms, int userData)
+UINT  Timer_SetTimerWindow(HWINDOW hWindow, UINT itemrID, UINT ms, void* userData)
 {
 	return Timer_SetTimerT(hWindow, NULL, itemrID, ms, userData);
 }
 
-UINT  Timer_SetTimerElement(HELE hEle, UINT itemrID, UINT ms, int userData)
+UINT  Timer_SetTimerElement(HELE hEle, UINT itemrID, UINT ms, void* userData)
 {
 	return Timer_SetTimerT(NULL, hEle, itemrID, ms, userData);
 }
 
-UINT Timer_SetTimerT(HWINDOW hWindow, HELE hEle, UINT itemrID, UINT ms, int userData)
+UINT Timer_SetTimerT(HWINDOW hWindow, HELE hEle, UINT itemrID, UINT ms, void* userData)
 {
 	//检查ID是否有效
 	if (g_hArray_Timer)

@@ -622,7 +622,7 @@ BOOL WINAPI XWnd_KillTimer(HWINDOW hWindow, UINT nIDEvent)
 /// @param uElapse  间隔时间毫秒.
 /// @param userData 绑定数据.
 /// @return 成功返回TRUE,否则相反.
-UINT WINAPI XWnd_SetTimerEx(HWINDOW hWindow, UINT nIDEvent, UINT uElapse, int userData)
+UINT WINAPI XWnd_SetTimerEx(HWINDOW hWindow, UINT nIDEvent, UINT uElapse, void* userData)
 {
 	return Timer_SetTimerWindow(hWindow, nIDEvent, uElapse, userData);
 }
@@ -1966,7 +1966,7 @@ void WINAPI XWnd_WindowToClientPt(HWINDOW hWindow, POINT *pPt)
 /// @brief 窗口绑定用户数据
 /// @param hWindow  窗口句柄.
 /// @param data   用户数据.
-void WINAPI XWnd_SetUserData(HWINDOW hWindow, int data)
+void WINAPI XWnd_SetUserData(HWINDOW hWindow, void* data)
 {
 	IsWindowDebug(hWindow, __FUNCTION__);
 	((window_*)hWindow)->userData = data;
@@ -1975,7 +1975,7 @@ void WINAPI XWnd_SetUserData(HWINDOW hWindow, int data)
 /// @brief 窗口获取绑定的用户数据
 /// @param hWindow  窗口句柄.
 /// @return data   用户数据.
-int  WINAPI XWnd_GetUserData(HWINDOW hWindow)
+void* WINAPI XWnd_GetUserData(HWINDOW hWindow)
 {
 	IsWindowDebug(hWindow, __FUNCTION__);
 	return ((window_*)hWindow)->userData;
@@ -3815,7 +3815,7 @@ BOOL Wnd_ConvTimer2(HWINDOW hWindow, windowMsg_Header_ *pHeader, WPARAM wParam, 
 			}
 			else
 			{
-				if (((pFunWndTimerEx)pFunT->pFun)(hWindow, wParam, lParam))
+				if (((pFunWndTimerEx)pFunT->pFun)(hWindow, wParam, (void*)lParam))
 					return TRUE;
 			}
 		}
@@ -4808,7 +4808,7 @@ BOOL CALLBACK Wnd_OnMouseWheel(HWINDOW hWindow, UINT flags, POINT *pPt) //WM_MOU
 	return TRUE;
 }
 
-BOOL CALLBACK Wnd_OnTimerEx(HWINDOW hWindow, UINT timerID, int userData) //定时器消息
+BOOL CALLBACK Wnd_OnTimerEx(HWINDOW hWindow, UINT timerID, void* userData) //定时器消息
 {
 	return TRUE;
 }

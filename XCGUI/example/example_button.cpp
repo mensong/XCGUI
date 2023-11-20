@@ -8,7 +8,7 @@
 #include "stdafx.h"
 
 
-#if 0
+#if 1
 
 //ÊÂ¼şÏìÓ¦
 BOOL CALLBACK My_EventBtnClick(HELE hEle,HELE hEventEle)

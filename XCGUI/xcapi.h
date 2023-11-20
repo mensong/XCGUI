@@ -73,9 +73,9 @@ struct xc_timer_
 extern HARRAY  g_hArray_Timer;//定时器列表
 extern HANDLE  g_hThread_Loop;
 extern CRITICAL_SECTION  g_timer_CriticalSection;
-UINT Timer_SetTimerWindow(HWINDOW hWindow, UINT itemrID, UINT ms, int userData);
-UINT Timer_SetTimerElement(HELE hEle, UINT itemrID, UINT ms, int userData);
-UINT Timer_SetTimerT(HWINDOW hWindow, HELE hEle, UINT itemrID, UINT ms, int userData);
+UINT Timer_SetTimerWindow(HWINDOW hWindow, UINT itemrID, UINT ms, void* userData);
+UINT Timer_SetTimerElement(HELE hEle, UINT itemrID, UINT ms, void* userData);
+UINT Timer_SetTimerT(HWINDOW hWindow, HELE hEle, UINT itemrID, UINT ms, void* userData);
 
 BOOL Timer_KillTimerWindow(int itemrID);
 BOOL Timer_KillTimerElement(int itemrID);

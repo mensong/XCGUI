@@ -169,7 +169,7 @@ BOOL FrameWnd_AddT(HWINDOW hWindow, layoutCell_ *pCellDest, layoutCell_ *pCellNe
 
 					int index = XTabBar_AddLabel(pCellNew->hTabBar, XPane_GetTitle(pChild->hPane), pChild->hPane);
 					HELE hButton = XTabBar_GetLabel(pCellNew->hTabBar, index);
-					XEle_SetUserData(hButton, (int)pChild);
+					XEle_SetUserData(hButton, (void*)pChild);
 					XEle_RegisterMessage(hButton, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 					XEle_RegisterMessage(hButton, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);
 					XEle_RegisterMessage(hButton, XM_MOUSEMOVE, FrameWnd_TabBar_Btn_OnMouseMove);
@@ -388,7 +388,7 @@ BOOL FrameWnd_Add_GroupToPane(HWINDOW hWindow, layoutCell_ *pCellDest, layoutCel
 
 			int index = XTabBar_AddLabel(pGroupCell->hTabBar, XPane_GetTitle(pChild->hPane), pChild->hPane);
 			HELE hButton = XTabBar_GetLabel(pGroupCell->hTabBar, index);
-			XEle_SetUserData(hButton, (int)pChild);
+			XEle_SetUserData(hButton, (void*)pChild);
 			XEle_RegisterMessage(hButton, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 			XEle_RegisterMessage(hButton, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);
 			XEle_RegisterMessage(hButton, XM_MOUSEMOVE, FrameWnd_TabBar_Btn_OnMouseMove);
@@ -442,8 +442,8 @@ HPANE_GROUP FrameWnd_Add_Merge_Pane2(HWINDOW hWindow, layoutCell_ *pCellDest, la
 
 	HELE hBtn1 = XTabBar_GetLabel(pCellParent->hTabBar, 0);
 	HELE hBtn2 = XTabBar_GetLabel(pCellParent->hTabBar, 1);
-	XEle_SetUserData(hBtn1, (int)pCellDest);
-	XEle_SetUserData(hBtn2, (int)pCellNew);
+	XEle_SetUserData(hBtn1, (void*)pCellDest);
+	XEle_SetUserData(hBtn2, (void*)pCellNew);
 
 	XArray_Add(pCellParent->hArrayList, pCellDest);
 	XArray_Add(pCellParent->hArrayList, pCellNew);
@@ -476,7 +476,7 @@ BOOL FrameWnd_Add_Merge_PaneToGroup(HWINDOW hWindow, layoutCell_ *pCellGroup, la
 		int index = XTabBar_AddLabel(pCellParent->hTabBar, XPane_GetTitle(pCellPane->hPane), pCellPane->hPane);
 		XTabBar_SetSelect(pCellParent->hTabBar, index);
 		HELE hBtn = XTabBar_GetLabel(pCellParent->hTabBar, index);
-		XEle_SetUserData(hBtn, (int)pCellPane);
+		XEle_SetUserData(hBtn, (void*)pCellPane);
 
 		XArray_Add(pCellParent->hArrayList, pCellPane);
 
@@ -510,7 +510,7 @@ BOOL FrameWnd_Add_Merge_Group2(HWINDOW hWindow, layoutCell_ *pCellDest, layoutCe
 			/////////////////////////////////////////////
 
 			HELE hBtn = XTabBar_GetLabel(pCellDest->hTabBar, index);
-			XEle_SetUserData(hBtn, (int)pChildCell);
+			XEle_SetUserData(hBtn, (void*)pChildCell);
 
 			XArray_Add(pCellDest->hArrayList, pChildCell);
 
@@ -554,7 +554,7 @@ BOOL FrameWnd_Add_Merge_GroupToPane(HWINDOW hWindow, layoutCell_ *pCellDest, lay
 
 			int index = XTabBar_AddLabel(pGroupCell->hTabBar, XPane_GetTitle(pChild->hPane), pChild->hPane);
 			HELE hButton = XTabBar_GetLabel(pGroupCell->hTabBar, index);
-			XEle_SetUserData(hButton, (int)pChild);
+			XEle_SetUserData(hButton, (void*)pChild);
 			XEle_RegisterMessage(hButton, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 			XEle_RegisterMessage(hButton, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);
 			XEle_RegisterMessage(hButton, XM_MOUSEMOVE, FrameWnd_TabBar_Btn_OnMouseMove);
@@ -594,7 +594,7 @@ BOOL FrameWnd_Add_Merge_GroupToPane(HWINDOW hWindow, layoutCell_ *pCellDest, lay
 	XTabBar_SetSelect(pGroupCell->hTabBar, index);
 
 	HELE hBtn = XTabBar_GetLabel(pGroupCell->hTabBar, index);
-	XEle_SetUserData(hBtn, (int)pCellDest);
+	XEle_SetUserData(hBtn, (void*)pCellDest);
 
 	XArray_Add(pGroupCell->hArrayList, pCellDest);
 
@@ -625,7 +625,7 @@ BOOL FrameWnd_AddPaneGroup(HWINDOW hWindow, layoutCell_ *pCellDest, layoutCell_ 
 			/////////////////////////////////////////////
 
 			HELE hBtn = XTabBar_GetLabel(pCellDest->hTabBar, index);
-			XEle_SetUserData(hBtn, (int)pChildCell);
+			XEle_SetUserData(hBtn, (void*)pChildCell);
 
 			XEle_RegisterMessage(hBtn, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 			XEle_RegisterMessage(hBtn, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);

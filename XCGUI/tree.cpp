@@ -287,7 +287,7 @@ void WINAPI XTree_SetImageList(HELE hEle, HXCGUI hImageList) //ÉèÖÃÍ¼Æ¬ÁĞ±í
 /// @param hEle  ÔªËØ¾ä±ú.
 /// @param id  ÏîID.
 /// @param data ÓÃ»§Êı¾İ.
-void WINAPI XTree_SetItemData(HELE hEle, int id, int data) //ÉèÖÃÓÃ»§Êı¾İ
+void WINAPI XTree_SetItemData(HELE hEle, int id, void* data) //ÉèÖÃÓÃ»§Êı¾İ
 {
 	IsTreeDebug(hEle, __FUNCTION__);
 	treeNode_ *pNode = Tree_GetTreeNode(hEle, TREE(hEle)->pRoot, id);
@@ -411,7 +411,7 @@ BOOL WINAPI XTree_SetItemBindEle(HELE hEle, int id, itemBindEle_ *pInfo) //°ó¶¨Ô
 /// @param hEle  ÔªËØ¾ä±ú.
 /// @param id    ÏîID.
 /// @return ÓÃ»§Êı¾İ.
-int WINAPI XTree_GetItemData(HELE hEle, int id) //»ñÈ¡ÓÃ»§Êı¾İ
+void* WINAPI XTree_GetItemData(HELE hEle, int id) //»ñÈ¡ÓÃ»§Êı¾İ
 {
 	IsTreeDebug(hEle, __FUNCTION__);
 	treeNode_ *pNode = Tree_GetTreeNode(hEle, TREE(hEle)->pRoot, id);
@@ -419,7 +419,7 @@ int WINAPI XTree_GetItemData(HELE hEle, int id) //»ñÈ¡ÓÃ»§Êı¾İ
 	{
 		return pNode->data;
 	}
-	return -1;
+	return NULL;
 }
 
 /// @brief »ñÈ¡Ïî¸ß¶È.

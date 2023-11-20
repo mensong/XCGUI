@@ -16,7 +16,7 @@ struct listBox_item_
 
 	BOOL  bCheck;    //复选框
 
-	int   userData; //用户绑定数据
+	void* userData; //用户绑定数据
 	HARRAY hArrayBindEle; //绑定的元素 itemBindEle_*
 };
 
@@ -72,7 +72,7 @@ XC_API int  WINAPI XListBox_GetItemCount(HELE hEle); //获取项数量
 XC_API HXCGUI WINAPI XListBox_GetImageList(HELE hEle); //获取图片列表
 XC_API BOOL WINAPI XListBox_GetItemRect(HELE hEle, in_ int index, out_ RECT *pRect);  //获取项坐标...
 XC_API int  WINAPI XListBox_HitTest(HELE hEle, POINT *pPt);  //测试鼠标点在哪个项上,-1没有在任何项上
-XC_API int  WINAPI XListBox_GetItemData(HELE hEle, int index); //获取项绑定数据
+XC_API void* WINAPI XListBox_GetItemData(HELE hEle, int index); //获取项绑定数据
 
 XC_API void WINAPI XListBox_SetItemText(HELE hEle, int index, wchar_t *pText);  //设置指定行文本
 XC_API void WINAPI XListBox_SetSelectItem(HELE hEle, int index);    //设置选择行
@@ -81,7 +81,7 @@ XC_API void WINAPI XListBox_SetImageList(HELE hEle, HXCGUI hImageList); //设置图
 XC_API void WINAPI XListBox_SetItemImage(HELE hEle, int index, int imageId); //设置项图标ID
 XC_API void WINAPI XListBox_SetItemCheck(HELE hEle, int index, BOOL bCheck); //设置项的复选框
 XC_API BOOL WINAPI XListBox_SetItemBindEle(HELE hEle, int index, itemBindEle_ *pInfo); //绑定元素
-XC_API void WINAPI XListBox_SetItemData(HELE hEle, int index, int data); //设置项绑定数据
+XC_API void WINAPI XListBox_SetItemData(HELE hEle, int index, void* data); //设置项绑定数据
 
 XC_API void WINAPI XListBox_SetSelectItemColor(HELE hEle, COLORREF color); //设置选择项颜色
 XC_API void WINAPI XListBox_SetItemMouseStayColor(HELE hEle, COLORREF color);//设置鼠标停留高亮项颜色

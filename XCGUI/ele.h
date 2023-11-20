@@ -95,7 +95,7 @@ struct ele_  //T1 ÔªËØ»ùÀà
 	BOOL bDestroy;         //·ÀÖ¹ÖØ¸´µ÷ÓÃÏú»Ùº¯Êı
 	BOOL bMouseThrough;    //Êó±ê´©Í¸
 
-	int  userData;         //ÓÃ»§Êı¾İ,ÄÚ²¿²»Ê¹ÓÃ
+	void* userData;         //ÓÃ»§Êı¾İ,ÄÚ²¿²»Ê¹ÓÃ
 
 	ele_     *pMouseTop;   //µ±Ç°Êó±êÔÚÄÄ¸ö×ÓÔªËØÉÏÃæ,¸ÃÔªËØµÄ¶¥¼¶×ÓÔªËØ,²»°üº¬×ÓÔªËØµÄ×ÓÔªËØ
 	POINT    elePt;        //ÅäºÏ¹ö¶¯ÊÓÍ¼,ÔªËØÊµ¼Ê×ø±ê.
@@ -275,7 +275,7 @@ XC_API HWINDOW WINAPI XEle_GetHWindow(HELE hEle); //»ñÈ¡´°¿Ú×ÊÔ´¾ä±ú
 /// @brief »ñÈ¡ÓÃ»§Êı¾İ.
 /// @param hEle ÔªËØ¾ä±ú
 /// @return ÓÃ»§Êı¾İ.
-XC_API int  WINAPI XEle_GetUserData(HELE hEle);  //»ñÈ¡ÓÃ»§Êı¾İ
+XC_API void* WINAPI XEle_GetUserData(HELE hEle);  //»ñÈ¡ÓÃ»§Êı¾İ
 
 /// @brief»ñÈ¡ÔªËØID
 /// @param hEle ÔªËØ¾ä±ú
@@ -374,7 +374,7 @@ XC_API BOOL WINAPI XEle_IsChildEle(HELE hEle, HELE hChild);  //ÅĞ¶ÏÖ¸¶¨ÔªËØÊÇ·ñÎ
 /// @brief ÉèÖÃÔªËØÓÃ»§Êı¾İ.
 /// @param hEle ÔªËØ¾ä±ú.
 /// @param data ÓÃ»§Êı¾İ.
-XC_API void WINAPI XEle_SetUserData(HELE hEle, int data);  //ÉèÖÃÓÃ»§Êı¾İ
+XC_API void WINAPI XEle_SetUserData(HELE hEle, void* data);  //ÉèÖÃÓÃ»§Êı¾İ
 
 /// @brief ÉèÖÃ¶¨Ê±Æ÷,·ÇÏµÍ³¶¨Ê±Æ÷.
 /// @param hEle       ÔªËØ¾ä±ú.
@@ -383,7 +383,7 @@ XC_API void WINAPI XEle_SetUserData(HELE hEle, int data);  //ÉèÖÃÓÃ»§Êı¾İ
 /// @param userData   °ó¶¨Êı¾İ.
 /// @param userData   ÓÃ»§Êı¾İ.
 /// @return ³É¹¦·µ»ØTRUE,·ñÔòÏà·´.
-XC_API UINT WINAPI XEle_SetTimerEx(HELE hEle, UINT nIDEvent, UINT uElapse, int userData = 0);
+XC_API UINT WINAPI XEle_SetTimerEx(HELE hEle, UINT nIDEvent, UINT uElapse, void* userData = 0);
 
 /// @brief ¹Ø±Õ¶¨Ê±Æ÷,·ÇÏµÍ³¶¨Ê±Æ÷.
 /// @param hEle       ÔªËØ¾ä±ú.

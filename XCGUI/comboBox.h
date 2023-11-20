@@ -38,7 +38,7 @@ struct comboBox_
 
 //API:
 XC_API HELE WINAPI XComboBox_Create(int x, int y, int cx, int cy, HXCGUI hParent = NULL);
-XC_API BOOL WINAPI XComboBox_AddString(HELE hEle, wchar_t *pText, int data = 0);  //Ôö¼ÓÒ»¸ö×Ö·û´®µ½×éºÏ¿ò
+XC_API BOOL WINAPI XComboBox_AddString(HELE hEle, wchar_t *pText, void* data = 0);  //Ôö¼ÓÒ»¸ö×Ö·û´®µ½×éºÏ¿ò
 
 XC_API void WINAPI XComboBox_DeleteItem(HELE hEle, int index);//É¾³ıÏî
 XC_API void WINAPI XComboBox_DeleteItemAll(HELE hEle);  //É¾³ıËùÓĞÏî
@@ -49,7 +49,7 @@ XC_API void WINAPI XComboBox_SetText(HELE hEle, wchar_t *pText);     //ÉèÖÃ±à¼­¿
 XC_API void WINAPI XComboBox_SetItemHeight(HELE hEle, int height); //ÉèÖÃÏÂÀ­ÁĞ±íÏî¸ß
 XC_API void WINAPI XComboBox_SetListHeight(HELE hEle, int height);   //ÉèÖÃÏÂÀ­ÁĞ±í¸ß¶È
 XC_API void WINAPI XComboBox_SetButtonWidth(HELE hEle, int width); //ÉèÖÃÏÂÀ­°´Å¥¿í¶È
-XC_API void WINAPI XComboBox_SetItemData(HELE hEle, int index, int data);
+XC_API void WINAPI XComboBox_SetItemData(HELE hEle, int index, void* data);
 
 XC_API int  WINAPI XComboBox_GetButtonWidth(HELE hEle); //»ñÈ¡ÏÂÀ­°´Å¥¿í¶È
 XC_API void WINAPI XComboBox_GetText(HELE hEle, wchar_t *pOut, int len);  //»ñÈ¡±à¼­¿òÎÄ±¾
@@ -57,7 +57,7 @@ XC_API int  WINAPI XComboBox_GetItemHeight(HELE hEle);  //»ñÈ¡Ïî¸ß
 XC_API int  WINAPI XComboBox_GetListHeight(HELE hEle); //»ñÈ¡ÏÂÀ­ÁĞ±í¸ß¶È
 XC_API wchar_t* WINAPI XComboBox_GetItemText(HELE hEle, int index); //»ñÈ¡ÏÂÀ­ÁĞ±íÎÄ±¾
 XC_API int  WINAPI XComboBox_GetSelectItem(HELE hEle);  //»ñÈ¡µ±Ç°Ñ¡ÔñÏîË÷Òı
-XC_API int WINAPI XComboBox_GetItemData(HELE hEle, int index);
+XC_API void* WINAPI XComboBox_GetItemData(HELE hEle, int index);
 XC_API int WINAPI XComboBox_GetItemCount(HELE hEle); //»ñÈ¡ÏîÊıÁ¿
 
 XC_API void WINAPI XComboBox_PopupDropDownList(HELE hEle); //µ¯³öÏÂÀ­ÁĞ±í

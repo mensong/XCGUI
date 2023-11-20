@@ -73,7 +73,7 @@ void ComboBox_Init(HELE hEle, int x, int y, int cx, int cy, int eleType, HXCGUI 
 /// @param pText 文本内容.
 /// @param data  项绑定用户数据.
 /// @return 如果成功返回TRUE,否则相反.
-BOOL WINAPI XComboBox_AddString(HELE hEle, wchar_t *pText, int data) //增加一个字符串到组合框
+BOOL WINAPI XComboBox_AddString(HELE hEle, wchar_t *pText, void* data) //增加一个字符串到组合框
 {
 	IsComboBoxDebug(hEle, __FUNCTION__);
 	if (NULL == pText) return FALSE;
@@ -203,10 +203,10 @@ int WINAPI XComboBox_GetSelectItem(HELE hEle)  //获取当前选择项索引
 /// @param hEle  元素句柄.
 /// @param index 项索引(基于0索引).
 /// @return 用户数据.
-int WINAPI XComboBox_GetItemData(HELE hEle, int index)
+void* WINAPI XComboBox_GetItemData(HELE hEle, int index)
 {
 	IsComboBoxDebug(hEle, __FUNCTION__);
-	return (int)XArray_GetAt(COMBOBOX(hEle)->hArrayData, index);
+	return XArray_GetAt(COMBOBOX(hEle)->hArrayData, index);
 }
 
 /// @brief 获取项数量.
@@ -264,7 +264,7 @@ void WINAPI XComboBox_SetButtonWidth(HELE hEle, int width) //设置下拉按钮宽度
 /// @param hEle 元素句柄.
 /// @param index 项索引(基于0索引).
 /// @param data  用户数据.
-void WINAPI XComboBox_SetItemData(HELE hEle, int index, int data)
+void WINAPI XComboBox_SetItemData(HELE hEle, int index, void* data)
 {
 	IsComboBoxDebug(hEle, __FUNCTION__);
 	XArray_SetAt(COMBOBOX(hEle)->hArrayData, index, (void*)data);

@@ -74,7 +74,7 @@ struct window_ //窗口信息
 	ele_    *pMouseTop;   //当前鼠标在哪个元素上面
 	ele_    *pFocus;      //拥有输入焦点的元素
 	ele_    *pOldFocus;   //当窗口获得焦点时,用于恢复元素焦点
-	int     userData;     //用户数据
+	void*    userData;     //用户数据
 
 	//窗口标识
 	///////////////////////////////////////////////////
@@ -199,7 +199,7 @@ XC_API void WINAPI XWnd_SetIconSize(HWINDOW hWindow, int width, int height);  //
 XC_API UINT WINAPI XWnd_SetTimer(HWINDOW hWindow, UINT nIDEvent, UINT uElapse); //设置定时器
 XC_API BOOL WINAPI XWnd_KillTimer(HWINDOW hWindow, UINT nIDEvent);
 
-XC_API UINT WINAPI XWnd_SetTimerEx(HWINDOW hWindow, UINT nIDEvent, UINT uElapse, int userData = 0);
+XC_API UINT WINAPI XWnd_SetTimerEx(HWINDOW hWindow, UINT nIDEvent, UINT uElapse, void* userData = 0);
 XC_API BOOL WINAPI XWnd_KillTimerEx(HWINDOW hWindow, UINT nIDEvent);
 
 XC_API void WINAPI XWnd_SetMinWidth(HWINDOW hWindow, int width);  //设置窗口最小宽度
@@ -297,8 +297,8 @@ XC_API void WINAPI XWnd_SetCaptionHeight(HWINDOW hWindow, int captionHeight); //
 XC_API void WINAPI XWnd_WindowToClientRect(HWINDOW hWindow, in_out_ RECT *pRect); //窗口非客户区坐标转换到客户区坐标
 XC_API void WINAPI XWnd_WindowToClientPt(HWINDOW hWindow, in_out_ POINT *pPt); //窗口非客户区点转换到客户区坐标点
 
-XC_API void WINAPI XWnd_SetUserData(HWINDOW hWindow, int data);
-XC_API int  WINAPI XWnd_GetUserData(HWINDOW hWindow);
+XC_API void WINAPI XWnd_SetUserData(HWINDOW hWindow, void* data);
+XC_API void* WINAPI XWnd_GetUserData(HWINDOW hWindow);
 
 //封装API:
 XC_API BOOL WINAPI XWnd_ShowWindow(HWINDOW hWindow, int nCmdShow);
@@ -424,7 +424,7 @@ BOOL CALLBACK Wnd_OnKeyDown(HWINDOW hWindow, WPARAM wParam, LPARAM lParam);	//WM
 BOOL CALLBACK Wnd_OnChar(HWINDOW hWindow, WPARAM wParam, LPARAM lParam);
 BOOL CALLBACK Wnd_OnCaptureChanged(HWINDOW hWindow, HWND hWnd);
 BOOL CALLBACK Wnd_OnMouseWheel(HWINDOW hWindow, UINT flags, POINT *pPt); //WM_MOUSEWHEEL 滚轮消息
-BOOL CALLBACK Wnd_OnTimerEx(HWINDOW hWindow, UINT timerID, int userData); //定时器消息
+BOOL CALLBACK Wnd_OnTimerEx(HWINDOW hWindow, UINT timerID, void* userData); //定时器消息
 
 
 BOOL CALLBACK Wnd_OnRedraw(HWINDOW hWindow, WPARAM wParam, LPARAM lParam); //自定义消息,为了重绘延迟

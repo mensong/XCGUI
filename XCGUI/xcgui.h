@@ -566,7 +566,7 @@ enum pane_state_
 #define  XWM_SETFONT          0x7000+6 //窗口字体改变
 
 //炫彩定时器
-///@code  BOOL CALLBACK WndTimer2(HWINDOW hWindow,int timerID,int userData);  @endcode
+///@code  BOOL CALLBACK WndTimer2(HWINDOW hWindow,int timerID, void* userData);  @endcode
 #define  XWM_TIMER            0x7000+8 //wParam:, lParam:
 
 
@@ -718,7 +718,7 @@ enum pane_state_
 #define  XM_RBUTTONUP      107   //wParam:标识, lParam:POINT坐标
 
 //炫彩定时器
-// BOOL (CALLBACK *pFunEleTimerEx)(HELE hEle,UINT timerID,int userData); //定时器消息 XWM_TIMER
+// BOOL (CALLBACK *pFunEleTimerEx)(HELE hEle,UINT timerID,void* userData); //定时器消息 XWM_TIMER
 #define  XM_TIMER          108
 
 
@@ -1503,7 +1503,7 @@ struct listView_drawItem_	//绘制项
 	RECT  rcText; ///<文字坐标
 	RECT  rect;   ///<整个区域,包含边框
 
-	int userData;  ///<用户数据
+	void* userData;  ///<用户数据
 };
 
 ///列表视图元素,组自绘结构
@@ -1517,7 +1517,7 @@ struct listView_drawGroup_ //绘制组
 	RECT     rcButton;  ///<展开按钮坐标
 	RECT     rect;      ///<组区域坐标
 
-	int userData;       ///<用户数据
+	void* userData;       ///<用户数据
 };
 
 ///列表视图元素,用户拖动项插入

@@ -638,7 +638,7 @@ void WINAPI XList_SetSpacingRight(HELE hEle, int spacing) //设置内容右间距
 /// @param hEle   元素句柄.
 /// @param index  项索引.
 /// @param data   用户数据.
-void WINAPI XList_SetItemData(HELE hEle, int index, int data)  //设置用户数据
+void WINAPI XList_SetItemData(HELE hEle, int index, void* data)  //设置用户数据
 {
 	IsListDebug(hEle, __FUNCTION__);
 	listItem_ *pItem = (listItem_*)XArray_GetAt(LIST(hEle)->hArrayItem, index);
@@ -692,7 +692,7 @@ void WINAPI XList_SetColumnMinWidth(HELE hEle, int index, int minWidth) //设置列
 /// @param hEle   元素句柄.
 /// @param index  项索引.
 /// @return 项绑定的用户数据.
-int WINAPI XList_GetItemData(HELE hEle, int index)   //设置用户数据
+void* WINAPI XList_GetItemData(HELE hEle, int index)   //设置用户数据
 {
 	IsListDebug(hEle, __FUNCTION__);
 

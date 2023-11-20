@@ -408,7 +408,7 @@ void Pane_Lock_group(HELE hEle)
 					XTabBar_AddLabel(pCellGroup->hTabBar, XPane_GetTitle(pChild->hPane), pChild->hPane);
 
 					HELE hBtn = XTabBar_GetLabel(pCellGroup->hTabBar, i);
-					XEle_SetUserData(hBtn, (int)pChild);
+					XEle_SetUserData(hBtn, (void*)pChild);
 					XEle_RegisterMessage(hBtn, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 					XEle_RegisterMessage(hBtn, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);
 					XEle_RegisterMessage(hBtn, XM_MOUSEMOVE, FrameWnd_TabBar_Btn_OnMouseMove);
@@ -597,7 +597,7 @@ void WINAPI XPane_Show(HELE hEle)     //Òþ²Ø-ÏÔÊ¾¸¡¶¯´°¸ñ
 
 							HELE hBtn = XTabBar_GetLabel(pPane->pCell->pParentCell->hTabBar, index);
 
-							XEle_SetUserData(hBtn, (int)pChild);
+							XEle_SetUserData(hBtn, (void*)pChild);
 
 							XEle_RegisterMessage(hBtn, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 							XEle_RegisterMessage(hBtn, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);
@@ -614,7 +614,7 @@ void WINAPI XPane_Show(HELE hEle)     //Òþ²Ø-ÏÔÊ¾¸¡¶¯´°¸ñ
 
 				HELE hBtn = XTabBar_GetLabel(pPane->pCell->pParentCell->hTabBar, index);
 
-				XEle_SetUserData(hBtn, (int)pPane->pCell);
+				XEle_SetUserData(hBtn, (void*)pPane->pCell);
 
 				XEle_RegisterMessage(hBtn, XM_LBUTTONDOWN, FrameWnd_TabBar_Btn_OnLButtonDown);
 				XEle_RegisterMessage(hBtn, XM_LBUTTONUP, FrameWnd_TabBar_Btn_OnLButtonUp);

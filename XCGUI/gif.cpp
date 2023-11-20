@@ -329,7 +329,7 @@ void WINAPI XGif_SetImage(HELE hEle, wchar_t *pImageName)
 				pObject->pGif = new ImageEx(pImageName);
 
 				if (pObject->pGif->InitAnimation(0, 0))
-					SetTimer(XEle_GetHWnd(hEle), (int)hEle, 100, Gif_TimerProc);
+					SetTimer(XEle_GetHWnd(hEle), (UINT_PTR)hEle, 100, Gif_TimerProc);
 			}
 		}
 	}
@@ -380,7 +380,7 @@ void WINAPI XGif_SetImageRes(HELE hEle, int id, wchar_t *pType)
 		}
 
 		if (pObject->pGif->InitAnimation(0, 0))
-			SetTimer(XEle_GetHWnd(hEle), (int)hEle, 100, Gif_TimerProc);
+			SetTimer(XEle_GetHWnd(hEle), (UINT_PTR)hEle, 100, Gif_TimerProc);
 	}
 }
 
@@ -461,7 +461,7 @@ void WINAPI XGif_SetImageZip(HELE hEle, wchar_t *pZipFileName, wchar_t *pImageNa
 		}
 
 		if (pObject->pGif->InitAnimation(0, 0))
-			SetTimer(XEle_GetHWnd(hEle), (int)hEle, 100, Gif_TimerProc);
+			SetTimer(XEle_GetHWnd(hEle), (UINT_PTR)hEle, 100, Gif_TimerProc);
 	}
 }
 
@@ -482,7 +482,7 @@ void Gif_DrawFrameGif(HELE hEle, HDRAW hDraw)
 	{
 		HDC hdc = XDraw_GetHDC_(hDraw);
 		int pause = pObject->pGif->DrawFrameGIF2(hdc);
-		SetTimer(XEle_GetHWnd(hEle), (int)hEle, pause, Gif_TimerProc);
+		SetTimer(XEle_GetHWnd(hEle), (UINT_PTR)hEle, pause, Gif_TimerProc);
 	}
 }
 

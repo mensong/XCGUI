@@ -635,7 +635,7 @@ int  WINAPI XListBox_HitTest(HELE hEle, POINT *pPt)  //测试鼠标点在哪个项上,-1没
 /// @param hEle   元素句柄
 /// @param index  项索引.
 /// @return 项绑定数据,如果失败返回-1.
-int  WINAPI XListBox_GetItemData(HELE hEle, int index) //获取项绑定数据
+void* WINAPI XListBox_GetItemData(HELE hEle, int index) //获取项绑定数据
 {
 	IsListBoxDebug(hEle, __FUNCTION__);
 	listBox_  *pListBox = LISTBOX(hEle);
@@ -646,14 +646,14 @@ int  WINAPI XListBox_GetItemData(HELE hEle, int index) //获取项绑定数据
 		listBox_item_ *pItem = (listBox_item_*)XArray_GetAt(pListBox->hArrayListItem, index);
 		return pItem->userData;
 	}
-	return -1;
+	return NULL;
 }
 
 /// @brief 设置项绑定数据.
 /// @param hEle   元素句柄
 /// @param index  项索引.
 /// @param data   项绑定数据.
-void WINAPI XListBox_SetItemData(HELE hEle, int index, int data) //设置项绑定数据
+void WINAPI XListBox_SetItemData(HELE hEle, int index, void* data) //设置项绑定数据
 {
 	IsListBoxDebug(hEle, __FUNCTION__);
 	listBox_  *pListBox = LISTBOX(hEle);

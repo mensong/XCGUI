@@ -26,7 +26,7 @@ struct listView_item_
 	HIMAGE hImage_stay;
 	HIMAGE hImage_select;
 
-	int   userData; //用户绑定数据
+	void* userData; //用户绑定数据
 };
 
 //组
@@ -42,7 +42,7 @@ struct listView_group_
 	int   index;  //组在数组中位置索引
 
 	BOOL  bExpand;    //是否展开
-	int   userData;   //用户绑定数据
+	void* userData;   //用户绑定数据
 };
 
 struct listView_
@@ -114,8 +114,8 @@ XC_API int  WINAPI XListView_InsertItem(HELE hEle, int groupIndex, int itemIndex
 XC_API int  WINAPI XListView_InsertGroup(HELE hEle, int groupIndex, wchar_t *pName, BOOL bExpand = TRUE);  //插入组
 
 XC_API void WINAPI XListView_SetImageList(HELE hEle, HXCGUI hImageList);
-XC_API BOOL WINAPI XListView_SetItemData(HELE hEle, int groupIndex, int itemIndex, int data); //设置项绑定数据
-XC_API BOOL WINAPI XListView_SetGroupData(HELE hEle, int groupIndex, int data); //设置组绑定数据
+XC_API BOOL WINAPI XListView_SetItemData(HELE hEle, int groupIndex, int itemIndex, void* data); //设置项绑定数据
+XC_API BOOL WINAPI XListView_SetGroupData(HELE hEle, int groupIndex, void* data); //设置组绑定数据
 XC_API BOOL WINAPI XListView_SetSelectItem(HELE hEle, int goupIndex, int itemIndex, BOOL bSelect);//设置选择项
 
 XC_API BOOL WINAPI XListView_SetItemText(HELE hEle, int groupIndex, int itemIndex, wchar_t *pText);//设置项文本
@@ -161,8 +161,8 @@ XC_API int  WINAPI XListView_GetItemIcon(HELE hEle, int groupIndex, int itemInde
 XC_API wchar_t* WINAPI XListView_GetGroupText(HELE hEle, int groupIndex);//获取组文本
 XC_API BOOL WINAPI XListView_GetGroupRect(HELE hEle, int groupIndex, out_ RECT *pRect);//获取组坐标
 
-XC_API int  WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex); //获取项绑定数据
-XC_API int  WINAPI XListView_GetGroupData(HELE hEle, int groupIndex); //获取组绑定数据
+XC_API void* WINAPI XListView_GetItemData(HELE hEle, int groupIndex, int itemIndex); //获取项绑定数据
+XC_API void* WINAPI XListView_GetGroupData(HELE hEle, int groupIndex); //获取组绑定数据
 
 XC_API BOOL WINAPI XListView_DeleteItem(HELE hEle, int groupIndex, int itemIndex); //删除项
 XC_API BOOL WINAPI XListView_DeleteGroup(HELE hEle, int groupIndex); //删除组
